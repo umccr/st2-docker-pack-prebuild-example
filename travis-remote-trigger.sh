@@ -11,4 +11,4 @@ curl -s -X POST \
    -H "Travis-API-Version: 3" \
    -H "Authorization: token $TRAVIS_ACCESS_TOKEN" \
    -d "$body" \
-   https://api.travis-ci.org/repo/umccr%2Fst2-arteria-docker/requests
+   https://api.travis-ci.org/repo/umccr%2Fst2-docker-umccr/requests
