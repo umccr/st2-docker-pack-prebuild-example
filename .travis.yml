@@ -1,0 +1,16 @@
+# Trigger st2-docker-umccr travis build using Travis API
+# See: https://docs.travis-ci.com/user/triggering-builds/
+language: generic
+sudo: required
+services:
+  - docker
+notifications:
+  email: false
+  #TODO configure Slack
+script:
+- ls -lah
+- docker build --no-cache -t umccr/stackstorm .
+- docker login -u=$DOCKER_USER -p=$DOCKER_PASSWORD
+- docker push umccr/stackstorm
+after_success:
+  - ./travis-remote-trigger.sh
