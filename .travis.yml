@@ -12,7 +12,7 @@ notifications:
   email: false
   slack:
     rooms:
-      - umccr:$SLACK_ARTERIA_TOKEN
+      - umccr:$SLACK_ARTERIA_TOKEN#arteria
     on_success: change
 script:
 - ls -lah
@@ -21,4 +21,4 @@ script:
 - docker login -u=$DOCKER_USER -p=$DOCKER_PASSWORD
 - docker push umccr/stackstorm
 after_success:
-  - ./travis-remote-trigger.sh
+  # - ./travis-remote-trigger.sh
