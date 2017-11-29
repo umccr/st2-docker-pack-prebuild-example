@@ -10,7 +10,7 @@ addons:
       - docker-ce
 notifications:
   email: false
-  slack: umccr:$SLACK_ARTERIA_TOKEN#arteria
+  slack: "umccr:$SLACK_ARTERIA_TOKEN"
     # on_success: change
 script:
 - ls -lah
