@@ -4,11 +4,16 @@ language: generic
 sudo: required
 services:
   - docker
+addons:
+  apt:
+    packages:
+      - docker-ce  
 notifications:
   email: false
   #TODO configure Slack
 script:
 - ls -lah
+- docker version
 - docker build --no-cache -t umccr/stackstorm .
 - docker login -u=$DOCKER_USER -p=$DOCKER_PASSWORD
 - docker push umccr/stackstorm
