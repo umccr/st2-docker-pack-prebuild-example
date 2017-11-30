@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Trigger st2-docker-umccr travis build using Travis API
+# See: https://docs.travis-ci.com/user/triggering-builds/
+
 body='{
 "request": {
 "branch":"master"
