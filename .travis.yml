@@ -10,7 +10,7 @@ notifications:
   email: false
   slack:
     secure: "bc7TbHjRFbgMnsjLntqz58AOwXBW3dhmZM3JRi6sHZb8fluqjiH9mgN68aFs4dTb/gERzZcL1TMnJko4XE5vJTHNWJfcqAmQ9bTmTg671ogEbB6TyIRJqsd8ucIM+I89QU4NHG+Nz1bX9kwVWvj8y6P0mBiqXa2Jeg7ZO7z9uASOxLteIrl6iW/7H5SJlUWWB0xEayUsHB8AIMIdi2gaF7+v/n4pkSZzfcs3RQU5fUcphW0s6GjPWIcURctz+BCq5Eerd1ZGYPz0Ner2LRsgech2Ljy0+MGwIePFFPxOcJ63rkNIKn402ahlSu3/OFhvH2lfcuN83VAam6qHqVARPbMmxk6+VUqQw+1GbsqbCbyfO+/0f+K2OeeVA/d942cAK/qRi7ftx7gHUEy3zLon2YLVsaXihyq22edjEwv2W1MfgF5YfrE+gJxa4CYOfX2dpLginDEg/y3IXyrD6reOjobSfqBa324Ic/9HkxEzluVO2Fd8RmKpJMiRqcVdfKZY23j9UYZHb1Pq3wZZMdNAaDetKf0vlvs93eir8mV61LbrtyropigQYL8LbF9Pk+rBiVK4oOgpdnARL1mK76J8mUOqyT+PnQUikLcewhuGqwEB5VL5mPf4kEKxGzrlLfXpf6cY0f5IQJNVST/nrgH6SQKP8Ht1z/74g3FcTkn1dA0="
-    on_success: change
+    # on_success: change
 script:
 - ls -lah
 - docker version
