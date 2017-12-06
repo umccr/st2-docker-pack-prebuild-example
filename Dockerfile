@@ -9,6 +9,11 @@ RUN cd /opt/stackstorm/packs \
  && git clone https://github.com/umccr/stackstorm-umccr.git umccr \
  && /setup-pack-virtualenv.py --pack umccr
 
+FROM base AS st2-ansible
+
+RUN cd /opt/stackstorm/packs \
+ && git clone https://github.com/StackStorm-Exchange/stackstorm-ansible ansible \
+ && /setup-pack-virtualenv.py --pack ansible
 
 FROM base AS st2-arteria
 
@@ -29,3 +34,6 @@ COPY --from=st2-umccr /opt/stackstorm/virtualenvs/umccr /opt/stackstorm/virtuale
 
 COPY --from=st2-arteria /opt/stackstorm/packs/arteria /opt/stackstorm/packs/arteria
 COPY --from=st2-arteria /opt/stackstorm/virtualenvs/arteria /opt/stackstorm/virtualenvs/arteria
+
+COPY --from=st2-ansible /opt/stackstorm/packs/ansible /opt/stackstorm/packs/ansible
+COPY --from=st2-ansible /opt/stackstorm/virtualenvs/ansible /opt/stackstorm/virtualenvs/ansible
