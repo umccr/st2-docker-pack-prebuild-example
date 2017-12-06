@@ -13,7 +13,7 @@ FROM base AS st2-ansible
 
 RUN cd /opt/stackstorm/packs \
  && git clone https://github.com/StackStorm-Exchange/stackstorm-ansible ansible \
- && apt-get install gcc libkrb5-dev
+ && apt-get install gcc libkrb5-dev \
  && /setup-pack-virtualenv.py --pack ansible
 
 FROM base AS st2-arteria
