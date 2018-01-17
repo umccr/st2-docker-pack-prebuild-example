@@ -38,3 +38,6 @@ COPY --from=st2-arteria /opt/stackstorm/virtualenvs/arteria /opt/stackstorm/virt
 
 COPY --from=st2-ansible /opt/stackstorm/packs/ansible /opt/stackstorm/packs/ansible
 COPY --from=st2-ansible /opt/stackstorm/virtualenvs/ansible /opt/stackstorm/virtualenvs/ansible
+
+
+RUN apt-get update && apt-get install -y vim
