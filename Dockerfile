@@ -12,7 +12,7 @@ RUN cd /opt/stackstorm/packs \
 FROM base AS st2-ansible
 
 RUN cd /opt/stackstorm/packs \
- && git clone hhttps://github.com/umccr/stackstorm-ansible.git ansible \
+ && git clone https://github.com/umccr/stackstorm-ansible.git ansible \
  && apt-get install -y gcc libkrb5-dev \
  && /setup-pack-virtualenv.py --pack ansible
 
