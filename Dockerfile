@@ -18,7 +18,7 @@ RUN cd /opt/stackstorm/packs \
 
  FROM base AS st2-pcgr
  RUN cd /opt/stackstorm/packs \
-  && git clone https://github.com/brainstorm/stackstorm-pcgr.git pcgr \
+  && git clone https://github.com/umccr/stackstorm-pcgr.git pcgr \
   && /setup-pack-virtualenv.py --pack pcgr
 
 
