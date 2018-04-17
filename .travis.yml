@@ -18,7 +18,7 @@ script:
 - ls -lah
 - docker version
 - docker build --no-cache -t umccr/stackstorm .
-- docker login -u=$DOCKER_USER -p=$DOCKER_PASSWORD
+- echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USER" --password-stdin
 - docker push umccr/stackstorm
 after_success:
   - ./travis-remote-trigger.sh
